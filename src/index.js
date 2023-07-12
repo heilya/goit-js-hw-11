@@ -4,16 +4,17 @@ import "simplelightbox/dist/simple-lightbox.min.css";
 import axios from 'axios';
 
 
-const axios = require('axios');
 
-
-
- async function fetchParameters(value, page) {
 const API_KEY = '38219577-d029f76c48d8fd975b70c05f3';
 const BASE_URL = 'https://pixabay.com/api/';
+
+
+async function fetchParameters(value, page) {
+
 const result = await axios.get(`${BASE_URL}?key=${API_KEY}&q=${value}&image_type=photo&orientation=horizontal&safesearch=true&per_page=40&page=${page}`);
 return result;
 };
+
 
 
 const searchForm = document.querySelector('.search-form');
