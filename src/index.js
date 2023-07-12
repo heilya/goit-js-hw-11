@@ -8,7 +8,7 @@ const axios = require('axios');
 
 
 
-export async function fetchParameters(value, page) {
+ async function fetchParameters(value, page) {
 const API_KEY = '38219577-d029f76c48d8fd975b70c05f3';
 const BASE_URL = 'https://pixabay.com/api/';
 const result = await axios.get(`${BASE_URL}?key=${API_KEY}&q=${value}&image_type=photo&orientation=horizontal&safesearch=true&per_page=40&page=${page}`);
