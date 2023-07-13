@@ -44,7 +44,6 @@ async function onSearch(evt) {
 
     if (inputValue === '') {
         Notiflix.Notify.failure("Sorry, there are no images matching your search query. Please try again.");
-    
         return
     }
     try {
@@ -108,17 +107,17 @@ async function onSearch(evt) {
   <img src="${webformatURL}" alt="${tags}" loading="lazy" />
   </a>
   
-  <div class="description">
+  <div class="info">
     <p class="info-item">
       <b>Likes</b>${likes}
     </p>
-    <p class="description-item">
+    <p class="info-item">
       <b>Views</b>${views}
     </p>
-    <p class="description-item">
+    <p class="info-item">
       <b>Comments</b> ${comments}
     </p>
-    <p class="description-item">
+    <p class="info-item">
       <b>Downloads</b>${downloads}
     </p>
   </div>
